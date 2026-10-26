@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Особый досуг — развивающие игры для вашего ребёнка</title>
+<meta name="description" content="Подбор развивающих игр для детей с учётом возраста и особенностей: 944 игры, вещи из дома, карточки, сказки с озвучкой, супер-герой и отчёт для специалиста." />
+<meta name="theme-color" content="#B8A8E8" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFF9F2; --bg2:#F4F0FF;
+  --coral:#FF8A7A; --mint:#8FD9C4; --lav:#B8A8E8;
+  --ink:#2B2B33; --mut:#6E6E7A;
+  --err:#E85C5C; --warn:#F5B942;
+  --shadow:0 4px 16px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Manrope',system-ui,sans-serif}
+body{background:linear-gradient(135deg,#FFF9F2 0%,#F4F0FF 100%);min-height:100vh;color:var(--ink)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 32px;flex-wrap:wrap;gap:14px}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:52px;height:52px;border-radius:18px;background:linear-gradient(135deg,#B8A8E8,#8FD9C4);display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:var(--shadow)}
+.brand h1{font-size:22px;font-weight:800}
+.brand p{font-size:13px;color:var(--mut)}
+.badges{display:flex;gap:8px;flex-wrap:wrap}
+.badge{background:#fff;border:1.5px solid #EFE6FA;padding:7px 13px;border-radius:12px;font-size:12.5px;font-weight:700;color:var(--mut)}
+.layout{display:flex;gap:28px;justify-content:center;align-items:flex-start;padding:6px 32px 56px;flex-wrap:wrap}
+.flows{width:330px;background:#fff;border-radius:24px;padding:22px;box-shadow:var(--shadow)}
+.flows h2{font-size:16px;margin-bottom:4px}
+.flows>p{font-size:12.5px;color:var(--mut);margin-bottom:14px;line-height:1.45}
+.fbtn{display:flex;flex-direction:column;gap:2px;width:100%;text-align:left;background:#FBF7FF;border:1.5px solid transparent;border-radius:14px;padding:11px 14px;margin-bottom:8px;cursor:pointer;transition:.2s;font-family:inherit}
+.fbtn:hover{border-color:var(--lav);background:#fff}
+.fbtn b{font-size:14px;font-weight:700}
+.fbtn span{font-size:11.5px;color:var(--mut)}
+.phone-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+.hint{font-size:13px;color:var(--mut)}
+.phone{position:relative;width:min(390px,100%);height:min(800px,90vh);min-height:640px;background:var(--bg);border-radius:44px;border:10px solid #26262e;overflow:hidden;box-shadow:0 30px 70px rgba(43,43,51,.22)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:118px;height:26px;background:#26262e;border-radius:14px;z-index:40}
+.statusbar{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:16px 26px 0;font-size:13px;font-weight:800;z-index:35;pointer-events:none}
+.screens{position:absolute;inset:0}
+.screen{position:absolute;inset:0;overflow-y:auto;padding:58px 20px 105px;opacity:0;pointer-events:none;transition:opacity .25s;scrollbar-width:none}
+.screen::-webkit-scrollbar{display:none}
+.screen.active{opacity:1;pointer-events:auto}
+.h1{font-size:26px;font-weight:800;line-height:1.2}
+.h2{font-size:20px;font-weight:800}
+.sub{font-size:14px;color:var(--mut);line-height:1.45}
+.sect{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:18px 2px 10px}
+.card{background:#fff;border-radius:24px;padding:16px;box-shadow:var(--shadow)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px;border:none;border-radius:16px;font-size:17px;font-weight:700;cursor:pointer;transition:.2s;font-family:inherit}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:linear-gradient(135deg,#FF8A7A,#ff6f5c);color:#fff;box-shadow:0 10px 22px rgba(255,138,122,.35)}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid #ECE4F6}
+.btn-mint{background:var(--mint);color:#fff;box-shadow:0 10px 22px rgba(143,217,196,.35)}
+.btn-lav{background:var(--lav);color:#fff;box-shadow:0 10px 22px rgba(184,168,232,.35)}
+.btn-sm{padding:11px 12px;font-size:13.5px;border-radius:13px}
+.back{display:inline-flex;align-items:center;gap:6px;background:none;border:none;font-size:14px;font-weight:700;color:var(--mut);cursor:pointer;margin-bottom:10px;font-family:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:9px 14px;border-radius:14px;background:#fff;border:1.5px solid #ECE4F6;font-size:13.5px;font-weight:600;cursor:pointer;transition:.2s;font-family:inherit;color:var(--ink)}
+.chip.sel{background:var(--lav);border-color:var(--lav);color:#fff}
+.chip.static{cursor:default}
+.chip.static.on{background:#FFEDEA;border-color:#FFD3CC;color:#D9564A}
+.note{background:#FFF4E4;border-radius:16px;padding:12px 14px;font-size:13px;color:#8a6d3b;line-height:1.45}
+.note.blue{background:#EEF6FF;color:#3d6a99}
+.note.mint{background:#EAF9F3;color:#2e7d63}
+.cover{height:140px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:58px;position:relative;overflow:hidden}
+.cover small{position:absolute;bottom:10px;right:12px;font-size:11px;font-weight:800;background:rgba(255,255,255,.78);padding:4px 9px;border-radius:9px;color:var(--ink)}
+.cov-a{background:linear-gradient(135deg,#FFE3DE,#FFCFC5)}
+.cov-b{background:linear-gradient(135deg,#DFF6EE,#C9EDDE)}
+.cov-c{background:linear-gradient(135deg,#EFE9FF,#DED4FA)}
+.cov-d{background:linear-gradient(135deg,#FFF1D6,#FFE3AE)}
+.cov-e{background:linear-gradient(135deg,#E3F2FF,#CBE7FC)}
+.mini-cover{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:30px;flex-shrink:0}
+.bottom-nav{position:absolute;bottom:0;left:0;right:0;height:80px;background:#fff;border-top:1px solid #F1EAF7;display:none;justify-content:space-around;align-items:flex-start;padding-top:11px;z-index:20;box-shadow:0 -8px 24px rgba(0,0,0,.04)}
+.phone.has-nav .bottom-nav{display:flex}
+.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;font-weight:700;color:#A9A9B4;background:none;border:none;cursor:pointer;font-family:inherit;transition:.2s}
+.tab .ic{font-size:22px;line-height:1}
+.tab.on{color:var(--coral)}
+.modal{position:absolute;inset:0;background:rgba(43,43,51,.45);display:none;align-items:flex-end;z-index:50}
+.modal.open{display:flex}
+.sheet{background:#fff;width:100%;border-radius:26px 26px 0 0;padding:22px 20px 28px;max-height:82%;overflow-y:auto;animation:up .28s ease}
+@keyframes up{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+.sheet .grab{width:44px;height:5px;border-radius:3px;background:#E8E0F2;margin:0 auto 14px}
+.sheet h3{font-size:19px;margin-bottom:6px}
+.sheet .sub{margin-bottom:14px}
+.toast{position:absolute;bottom:96px;left:50%;transform:translateX(-50%) translateY(10px);background:#2B2B33;color:#fff;padding:12px 18px;border-radius:14px;font-size:13.5px;font-weight:600;opacity:0;pointer-events:none;transition:.25s;z-index:60;max-width:88%;text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.hero-ill{height:180px;border-radius:26px;display:flex;align-items:center;justify-content:center;font-size:80px;background:linear-gradient(135deg,#EFE9FF,#FFE3DE);margin:14px 0}
+.opt{display:flex;gap:12px;align-items:center;width:100%;background:#fff;border:2px solid #ECE4F6;border-radius:20px;padding:16px;cursor:pointer;transition:.2s;margin-bottom:10px;text-align:left;font-family:inherit}
+.opt:hover{border-color:var(--lav)}
+.opt .em{font-size:30px}
+.opt b{display:block;font-size:15.5px}
+.opt span span{font-size:12.5px;color:var(--mut)}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:16px}
+.dots i{width:8px;height:8px;border-radius:50%;background:#E4DAF2}
+.dots i.on{background:var(--coral)}
+.field{margin-bottom:14px}
+.field label{font-size:13px;font-weight:700;color:var(--mut);display:block;margin-bottom:6px}
+.field input{width:100%;padding:14px 16px;border-radius:15px;border:1.5px solid #ECE4F6;font-size:16px;font-weight:600;font-family:inherit;background:#fff;color:var(--ink)}
+.field input:focus{outline:none;border-color:var(--lav)}
+.home-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.avatar-sm{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.av-lav{background:linear-gradient(135deg,#EFE9FF,#DED4FA)}
+.av-mint{background:linear-gradient(135deg,#DFF6EE,#BFE9DA)}
+.av-sun{background:linear-gradient(135deg,#FFF1D6,#FFE3AE)}
+.gcard{display:flex;gap:12px;align-items:center;margin-bottom:10px;cursor:pointer;transition:.2s}
+.gcard:hover{transform:translateY(-2px)}
+.tagrow{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.tag{font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:9px;background:#F4F0FF;color:#7d6ba8}
+.tag.m{background:#EAF9F3;color:#2e7d63}
+.tag.w{background:#FFF4E4;color:#8a6d3b}
+.step{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+.step-img{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.step p{font-size:14px;line-height:1.4;padding-top:4px}
+.fb-row{display:flex;gap:8px;margin-top:14px}
+.fb{flex:1;padding:11px 4px;border-radius:14px;border:1.5px solid #ECE4F6;background:#fff;font-size:12px;font-weight:700;cursor:pointer;transition:.2s;font-family:inherit;color:var(--ink)}
+.fb.on{background:var(--coral);border-color:var(--coral);color:#fff}
+.prog{height:10px;background:#F1EAF7;border-radius:6px;overflow:hidden;margin:12px 0 16px}
+.prog i{display:block;height:100%;width:0;background:var(--mint);border-radius:6px;transition:.3s}
+.rstep{display:flex;gap:12px;align-items:center;background:#fff;border-radius:18px;padding:14px;margin-bottom:10px;cursor:pointer;transition:.2s;box-shadow:var(--shadow)}
+.rstep .circ{width:30px;height:30px;border-radius:50%;border:2px solid #E4DAF2;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;transition:.2s}
+.rstep.done{background:#EAF9F3}
+.rstep.done .circ{background:var(--mint);border-color:var(--mint);color:#fff}
+.rstep b{font-size:14.5px}
+.rstep p{font-size:12.5px;color:var(--mut)}
+.pstep{display:flex;align-items:center;gap:12px;padding:11px 4px;font-size:14.5px;font-weight:600;color:#B9B3C6;transition:.3s}
+.pstep .pi{width:28px;height:28px;border-radius:50%;background:#F1EAF7;display:flex;align-items:center;justify-content:center;font-size:13px}
+.pstep.done{color:var(--ink)}
+.pstep.done .pi{background:var(--mint);color:#fff}
+.stats{display:flex;gap:10px;margin-bottom:14px}
+.stat{flex:1;background:#fff;border-radius:18px;padding:13px;text-align:center;box-shadow:var(--shadow)}
+.stat b{font-size:21px;display:block}
+.stat span{font-size:11px;color:var(--mut);font-weight:600}
+.bars{display:flex;gap:8px;align-items:flex-end;height:110px;padding:6px 2px 0}
+.bcol{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end}
+.bcol i{width:100%;background:linear-gradient(180deg,#FF9D90,var(--coral));border-radius:8px;min-height:6px}
+.bcol i.zero{background:#F1EAF7}
+.bcol span{font-size:10.5px;color:var(--mut);font-weight:700}
+.dentry{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.dentry .em{font-size:22px}
+.avatar-big{width:86px;height:86px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:42px;flex-shrink:0}
+.prow{display:flex;align-items:center;gap:12px;width:100%;background:#fff;border:none;border-radius:18px;padding:15px;margin-bottom:9px;cursor:pointer;box-shadow:var(--shadow);font-family:inherit;text-align:left;transition:.2s}
+.prow:hover{transform:translateY(-1px)}
+.prow .em{font-size:22px;width:30px;text-align:center}
+.prow b{font-size:14.5px;display:block}
+.prow span span{font-size:12px;color:var(--mut)}
+.prow .arr{margin-left:auto;color:#C9C2D8;font-size:18px}
+.skill{margin-bottom:11px;padding:14px 16px}
+.sk-top{display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px}
+.sk-top b{font-weight:800}
+.sl-val{font-size:12.5px;font-weight:800;color:var(--coral)}
+.sl-label{font-size:12.5px;color:var(--mut);line-height:1.4;margin-top:6px;min-height:17px}
+input[type=range]{width:100%;accent-color:var(--coral);cursor:pointer}
+.player{display:flex;align-items:center;gap:13px}
+.pbar{flex:1;height:7px;background:#F1EAF7;border-radius:4px;overflow:hidden}
+.pbar i{display:block;height:100%;width:30%;background:var(--coral);border-radius:4px}
+.playing .pbar i{animation:prog 22s linear infinite}
+@keyframes prog{from{width:2%}to{width:100%}}
+.playbtn{width:46px;height:46px;border-radius:50%;border:none;background:var(--coral);color:#fff;font-size:17px;cursor:pointer;flex-shrink:0;box-shadow:0 6px 14px rgba(255,138,122,.4)}
+.chat-box{display:flex;flex-direction:column;gap:10px;padding-bottom:12px}
+.msg{max-width:86%;padding:12px 15px;border-radius:18px;font-size:14px;line-height:1.45}
+.msg.bot{background:#fff;align-self:flex-start;border-bottom-left-radius:6px;box-shadow:var(--shadow)}
+.msg.me{background:var(--lav);color:#fff;align-self:flex-end;border-bottom-right-radius:6px}
+.typing{display:flex;gap:4px;padding:15px 17px}
+.typing span{width:7px;height:7px;background:#B8A8E8;border-radius:50%;animation:blink 1s infinite}
+.typing span:nth-child(2){animation-delay:.18s}
+.typing span:nth-child(3){animation-delay:.36s}
+@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
+.chat-in{display:flex;gap:9px;margin-top:8px}
+.chat-in input{flex:1;padding:13px 16px;border-radius:15px;border:1.5px solid #ECE4F6;font-size:14px;font-family:inherit}
+.chat-in input:focus{outline:none;border-color:var(--lav)}
+.chat-in button{width:50px;border-radius:15px;border:none;background:var(--coral);color:#fff;font-size:18px;cursor:pointer}
+.center{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:0 30px}
+.spin{width:66px;height:66px;border:6px solid #F1E7FF;border-top-color:var(--coral);border-radius:50%;animation:rot 1s linear infinite;margin-bottom:22px}
+@keyframes rot{to{transform:rotate(360deg)}}
+.benef{display:flex;align-items:center;gap:10px;padding:9px 2px;font-size:14px;font-weight:600}
+.benef .ck{width:24px;height:24px;border-radius:50%;background:var(--mint);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.price{text-align:center;padding:20px}
+.price b{font-size:34px}
+.price span{color:var(--mut);font-size:14px}
+.libcount{font-size:12.5px;font-weight:700;color:var(--coral);margin:8px 2px 12px}
+.preset{display:flex;gap:8px;margin-bottom:6px}
+.preset .btn{width:auto;flex:1}
+.dxgroup{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#a29bbb;margin:12px 2px 7px}
+.dxgroup:first-child{margin-top:2px}
+.stepcard{width:100%;border-radius:18px;margin-top:10px;display:block;border:1px solid #F1EAF7}
+.stepcard-cap{font-size:11.5px;font-weight:800;color:var(--mut);margin-top:7px;display:flex;align-items:center;gap:5px}
+.btn-fav{background:#FFEDEA;color:#D9564A;border:1.5px solid #FFD3CC}
+.btn-sun{background:linear-gradient(135deg,#FFB55C,#FF8A7A);color:#fff;box-shadow:0 6px 18px rgba(255,150,90,.35)}
+.btn-sun:disabled{opacity:.7}
+.child-card{width:100%;background:#fff;border:2px solid #EFE6FA;border-radius:26px;padding:24px 20px 18px;text-align:center;cursor:pointer;box-shadow:var(--shadow);display:block;margin-top:12px;font-family:inherit;transition:.2s}
+.child-card:hover{border-color:var(--lav)}
+.child-card:active{transform:scale(.98)}
+.avatar-xl{width:112px;height:112px;font-size:56px;margin:0 auto 10px;border-radius:38px;display:flex;align-items:center;justify-content:center}
+.hint-sm{display:block;font-size:12px;color:var(--mut);margin-top:8px;font-weight:600}
+.genimg{width:100%;border-radius:22px;display:block;box-shadow:var(--shadow);margin:12px 0}
+.tag.age{background:#FFF1E4;color:#B36A2E}
+.rline{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.rline b{width:118px;font-size:12.5px;flex-shrink:0;text-align:left}
+.rline .rbar{flex:1}
+.rbar{height:11px;border-radius:7px;background:#F0ECF8;overflow:hidden}
+.rbar i{display:block;height:100%;border-radius:7px}
+.pct{font-size:12px;font-weight:800;width:40px;text-align:right;flex-shrink:0}
+.cardblock{background:#FBF7FF;border:1.5px dashed #D9CBF2;border-radius:18px;padding:14px;margin:12px 0}
+.cardblock img{width:100%;border-radius:14px;display:block;margin-bottom:8px}
+.cardblock b{font-size:13.5px}
+.dlbtn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-family:inherit}
+.hero-badge{display:flex;align-items:center;gap:8px;background:#FFF4E4;border-radius:12px;padding:8px 12px;margin-bottom:7px;font-size:13px;font-weight:700;color:#8a6d3b}
+.msg .mini{background:#FBF7FF;border-radius:14px;padding:10px 12px;margin-top:8px;font-size:13px;line-height:1.5}
+.msg .mini b{display:block;margin-bottom:4px}
+.msg .mbtn{display:inline-block;margin-top:8px;background:var(--mint);color:#fff;border:none;border-radius:11px;padding:8px 13px;font-size:12.5px;font-weight:700;cursor:pointer;font-family:inherit}
+@media(max-width:1140px){.layout{flex-direction:column;align-items:center}.flows{width:100%;max-width:390px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo">🌈</div>
+    <div>
+      <h1>«Особый досуг»</h1>
+      <p>Демо: база игр из ваших документов + ИИ-подбор под профиль</p>
+    </div>
+  </div>
+  <div class="badges">
+    <span class="badge" id="db-badge">🗂 База: 944 игры</span>
+    <span class="badge">🎂 Возраст на каждой игре</span>
+    <span class="badge">🎴 Карточки — только где нужны</span>
+  </div>
+</header>
+
+<main class="layout">
+  <aside class="flows">
+    <h2>Как смотреть демо</h2>
+    <p>В базе — <b id="aside-count">944</b> игры. У каждой проставлен <b>возраст</b> и список вещей «Понадобится». Показываются <b>только подходящие</b> игры — по возрасту и особенностям ребёнка. Карточки прилагаются только к играм, где они нужны (лото, парные, символы).</p>
+    <button class="fbtn" data-goto="s-home"><b>🏠 Главная + Быстрый старт + Супер-герой</b><span>Настроение → лучшая игра · ИИ рисует супергероя</span></button>
+    <button class="fbtn" data-goto="s-games"><b>🧩 Только подходящие игры</b><span>Возраст на каждой карточке · фильтры · поиск</span></button>
+    <button class="fbtn" data-goto="s-game"><b>📋 Карточка игры</b><span>Возраст, «Понадобится», шаги, карточки — где нужны</span></button>
+    <button class="fbtn" onclick="openDemoCardGame()"><b>🎴 Карточные игры</b><span>Лото, парные, символы — с наглядными карточками</span></button>
+    <button class="fbtn" data-goto="s-tales"><b>🎨 Творчество</b><span>Сказка (с выбором длительности) + аватарка с скачиванием</span></button>
+    <button class="fbtn" data-goto="s-chat"><b>💬 Чат с ИИ</b><span>Пришлите список вещей — ИИ придумает игру</span></button>
+    <button class="fbtn" data-goto="s-profile"><b>👤 Личный кабинет</b><span>Ребёнок под фоткой · Мои игры · Дневник · Отчёт специалисту</span></button>
+    <button class="fbtn" data-goto="s-report"><b>📊 Отчёт для специалиста</b><span>Типы игр: что заходит, а что нет</span></button>
+    <button class="fbtn" data-goto="s-welcome"><b>🎬 Онбординг</b><span>Анкета ребёнка за 3 шага</span></button>
+    <button class="fbtn" data-goto="s-sub"><b>💎 Подписка</b><span>400 ₽/мес, триал 7 дней</span></button>
+  </aside>
+
+  <section class="phone-wrap">
+    <div class="phone has-nav" id="phone">
+      <div class="notch"></div>
+      <div class="statusbar"><span>9:41</span><span>▮▮▮ 📶 🔋</span></div>
+
+      <div class="screens">
+
+        <!-- Welcome -->
+        <div class="screen active" id="s-welcome">
+          <div class="hero-ill">👩‍👧‍👦</div>
+          <div class="h1" style="text-align:center">Добро пожаловать в «Особый досуг»</div>
+          <p class="sub" style="text-align:center;margin:10px 0 22px">Игры и занятия, подобранные специально для вашего ребёнка. В базе — <span id="welcome-count">944</span> игры.</p>
+          <button class="btn btn-primary" data-goto="s-question">Начать</button>
+          <button class="btn btn-ghost" style="margin-top:10px" onclick="toast('В демо вход не требуется')">У меня уже есть аккаунт</button>
+          <p class="sub" style="text-align:center;font-size:11.5px;margin-top:20px">Приложение не является медицинским сервисом и не заменяет занятия со специалистом.</p>
+        </div>
+
+        <!-- Вопрос -->
+        <div class="screen" id="s-question">
+          <div class="hero-ill">💗</div>
+          <div class="h1" style="text-align:center">Расскажите об особенностях ребёнка</div>
+          <p class="sub" style="text-align:center;margin:10px 0 22px">Так ИИ подберёт игры точно под вашего ребёнка — это займёт минуту.</p>
+          <button class="opt" id="q-yes"><span class="em">🌟</span><span><b>Заполнить анкету</b><span>Имя и возраст · особенности · интересы — 3 шага</span></span></button>
+          <p class="sub" style="text-align:center;font-size:11.5px;margin-top:16px">Данные хранятся приватно и используются только для подбора игр.</p>
+        </div>
+
+        <!-- Анкета 1 -->
+        <div class="screen" id="s-ob1">
+          <button class="back" data-goto="s-question">← Назад</button>
+          <div class="h1">Расскажите о ребёнке</div>
+          <p class="sub" style="margin:8px 0 18px">Шаг 1 из 3</p>
+          <div class="field"><label>Имя</label><input id="name-input" value="Мия"></div>
+          <div class="field"><label>Возраст</label><input value="3 года 4 мес"></div>
+          <div id="diag-block">
+            <div class="sect">Особенности развития (мультивыбор)</div>
+            <div class="chips multi">
+              <button class="chip sel">РАС</button><button class="chip">ЗПР</button>
+              <button class="chip">СДВГ</button><button class="chip">Нарушения речи</button>
+              <button class="chip">ДЦП</button><button class="chip">Синдром Дауна</button>
+              <button class="chip">Интеллект. особенности</button><button class="chip">Поведение</button>
+            </div>
+            <p class="sub" style="font-size:11.5px;margin-top:10px">Речь, заикание, слух, зрение и другие особенности можно указать позже в личном кабинете. Используются только для подбора игр.</p>
+          </div>
+          <button class="btn btn-primary" style="margin-top:18px" data-goto="s-ob2">Далее</button>
+          <div class="dots"><i class="on"></i><i></i><i></i></div>
+        </div>
+
+        <!-- Анкета 2 -->
+        <div class="screen" id="s-ob2">
+          <button class="back" data-goto="s-ob1">← Назад</button>
+          <div class="h1">Что любит ваш ребёнок?</div>
+          <p class="sub" style="margin:8px 0 18px">Шаг 2 из 3 — интересы повышают % соответствия игр</p>
+          <div class="chips multi">
+            <button class="chip sel">🐱 Животные</button><button class="chip">🚗 Машинки</button>
+            <button class="chip sel">🎵 Музыка</button><button class="chip">🎨 Рисование</button>
+            <button class="chip">📖 Сказки</button><button class="chip">🧱 Кубики</button>
+            <button class="chip">💧 Вода</button><button class="chip">🌿 Природа</button>
+            <button class="chip">⚽ Мяч</button><button class="chip">🟠 Лепка</button>
+          </div>
+          <button class="btn btn-primary" style="margin-top:22px" data-goto="s-ob3">Далее</button>
+          <div class="dots"><i></i><i class="on"></i><i></i></div>
+        </div>
+
+        <!-- Анкета 3 -->
+        <div class="screen" id="s-ob3">
+          <button class="back" data-goto="s-ob2">← Назад</button>
+          <div class="h1">Сколько времени и что есть под рукой?</div>
+          <p class="sub" style="margin:8px 0 16px">Шаг 3 из 3</p>
+          <div class="sect">Время на занятие</div>
+          <div class="chips single">
+            <button class="chip">5 мин</button><button class="chip sel">10 мин</button>
+            <button class="chip">15 мин</button><button class="chip">30 мин</button>
+          </div>
+          <div class="sect">Доступные материалы</div>
+          <div class="chips multi">
+            <button class="chip sel">🍚 Крупа</button><button class="chip sel">⚽ Мяч</button>
+            <button class="chip sel">🧱 Кубики</button><button class="chip sel">📄 Бумага</button>
+            <button class="chip sel">🟠 Пластилин</button><button class="chip">👕 Прищепки</button>
+            <button class="chip">🔘 Пуговицы</button><button class="chip">🫧 Пузыри</button>
+            <button class="chip">📚 Книги</button><button class="chip">🎨 Краски</button>
+            <button class="chip">💧 Вода</button><button class="chip">🧸 Игрушки</button>
+            <button class="chip">🛏 Подушки</button>
+          </div>
+          <button class="btn btn-primary" style="margin-top:22px" id="ob-done">Готово</button>
+          <div class="dots"><i></i><i></i><i class="on"></i></div>
+        </div>
+
+        <!-- Главная -->
+        <div class="screen" id="s-home">
+          <div class="home-head">
+            <div class="avatar-sm av-lav" id="home-avatar">👧</div>
+            <div>
+              <div class="h2">Здравствуйте, Анна!</div>
+              <p class="sub">Чем займёмся сегодня с <span id="home-child">Мией</span>?</p>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="font-size:19px;padding:18px" data-goto="s-quick1">⚡ Быстрый старт</button>
+          <button class="btn btn-sun" style="font-size:18px;padding:16px;margin-top:10px" id="hero-btn">🦸 Сгенерировать супер-героя</button>
+          <p class="sub" style="text-align:center;margin:6px 0 4px;font-size:12.5px">ИИ превратит особенности ребёнка в суперсилы</p>
+
+          <div class="sect">Подобрано для ребёнка — пересчитывается по профилю</div>
+          <div id="home-recs"></div>
+          <button class="btn btn-ghost btn-sm" style="margin:4px 0 0 auto;display:flex" data-goto="s-games">Все подходящие игры →</button>
+
+          <div class="sect">Коллекции</div>
+          <div class="chips">
+            <button class="chip" onclick="toast('Коллекция «В дороге» — Post-MVP')">🚗 В дороге</button>
+            <button class="chip" onclick="toast('Коллекция «В очереди» — Post-MVP')">🛒 В очереди</button>
+            <button class="chip" onclick="toast('Коллекция «На улице» — Post-MVP')">🌳 На улице</button>
+          </div>
+        </div>
+
+        <!-- Быстрый старт 1 -->
+        <div class="screen" id="s-quick1">
+          <button class="back" data-goto="s-home">← Отмена</button>
+          <div class="h1">Сколько есть времени?</div>
+          <p class="sub" style="margin:8px 0 20px">Быстрый старт · шаг 1 из 2</p>
+          <div class="chips single" style="gap:10px">
+            <button class="chip" style="padding:16px 24px;font-size:16px">5 мин</button>
+            <button class="chip sel" style="padding:16px 24px;font-size:16px">10 мин</button>
+            <button class="chip" style="padding:16px 24px;font-size:16px">15 мин</button>
+            <button class="chip" style="padding:16px 24px;font-size:16px">30 мин</button>
+          </div>
+          <button class="btn btn-primary" style="margin-top:24px" data-goto="s-quick2">Далее</button>
+        </div>
+
+        <!-- Быстрый старт 2 -->
+        <div class="screen" id="s-quick2">
+          <button class="back" data-goto="s-quick1">← Назад</button>
+          <div class="h1">Какое настроение у ребёнка?</div>
+          <p class="sub" style="margin:8px 0 20px">Быстрый старт · шаг 2 из 2</p>
+          <div class="chips single" style="gap:10px">
+            <button class="chip sel" data-v="calm" style="padding:16px 20px;font-size:15px">😌 Спокойное</button>
+            <button class="chip" data-v="active" style="padding:16px 20px;font-size:15px">🤸 Активное</button>
+            <button class="chip" data-v="tired" style="padding:16px 20px;font-size:15px">😴 Усталое</button>
+            <button class="chip" data-v="cranky" style="padding:16px 20px;font-size:15px">😣 Капризное</button>
+          </div>
+          <button class="btn btn-primary" style="margin-top:24px" id="q-next2">Подобрать игру ✨</button>
+        </div>
+
+        <!-- ИИ подбор -->
+        <div class="screen" id="s-aiload">
+          <div class="center">
+            <div class="spin"></div>
+            <div class="h2" id="ai-status">Анализирую профиль…</div>
+            <p class="sub" style="margin-top:8px">Возраст · особенности · материалы · настроение</p>
+          </div>
+        </div>
+
+        <!-- Супер-герой: загрузка -->
+        <div class="screen" id="s-hero-load">
+          <div class="center">
+            <div class="spin"></div>
+            <div class="h2" id="hero-status">Рисую супер-героя…</div>
+            <p class="sub" style="margin-top:8px">Особенности становятся суперсилами ✨</p>
+          </div>
+        </div>
+
+        <!-- Супер-герой: результат -->
+        <div class="screen" id="s-hero-done">
+          <div class="h1" style="text-align:center">Ваш супер-герой!</div>
+          <div id="hero-visual"></div>
+          <div class="h2" style="text-align:center;margin-top:12px" id="hero-name">Супер-Мия</div>
+          <div id="hero-powers" style="margin-top:10px"></div>
+          <a class="btn btn-mint dlbtn" id="hero-download" download="superhero.png" style="margin-top:14px">⬇ Скачать картинку</a>
+          <div style="display:flex;gap:10px;margin-top:10px">
+            <button class="btn btn-lav btn-sm" id="hero-avatar-btn" style="flex:1">Сделать аватаркой</button>
+            <button class="btn btn-ghost btn-sm" id="hero-again" style="flex:1">🔄 Ещё раз</button>
+          </div>
+        </div>
+
+        <!-- База игр / подбор -->
+        <div class="screen" id="s-games">
+          <div class="h1">Подбор игр</div>
+          <p class="sub" style="margin:6px 0 0">Показываем только игры, подходящие <span id="suit-name">Мие</span> по возрасту и особенностям 🎯</p>
+          <div class="libcount" id="lib-count"></div>
+          <input id="lib-search" placeholder="🔍 Поиск по названию…" style="width:100%;padding:13px 16px;border-radius:15px;border:1.5px solid #ECE4F6;font-size:14px;font-family:inherit;margin-bottom:12px;background:#fff">
+          <div class="chips single" id="cat-chips" style="margin-bottom:14px">
+            <button class="chip sel" data-cat="all">Все</button>
+            <button class="chip" data-cat="sensor">Сенсорные</button>
+            <button class="chip" data-cat="motor">Моторные</button>
+            <button class="chip" data-cat="speech">Речевые</button>
+            <button class="chip" data-cat="cog">Когнитивные</button>
+            <button class="chip" data-cat="social">Соц.-эмоц.</button>
+            <button class="chip" data-cat="relax">Релаксация</button>
+            <button class="chip" data-cat="creative">Творческие</button>
+          </div>
+          <div id="lib-list"></div>
+          <button class="btn btn-ghost btn-sm" id="lib-more" style="margin:12px 0 0;display:none">Показать ещё 30</button>
+        </div>
+
+        <!-- Карточка игры (динамическая) -->
+        <div class="screen" id="s-game">
+          <div id="game-body"></div>
+        </div>
+
+        <!-- Выполнение -->
+        <div class="screen" id="s-run">
+          <button class="back" data-goto="s-game">← Карточка</button>
+          <div class="h1" id="run-title" style="font-size:23px"></div>
+          <div style="display:flex;justify-content:space-between;margin-top:8px">
+            <span class="sub" style="font-size:13px">Прогресс</span>
+            <span class="sl-val" id="run-count">0 / 4</span>
+          </div>
+          <div class="prog"><i id="run-bar"></i></div>
+          <div id="run-body"></div>
+          <button class="btn btn-primary" style="margin-top:14px" id="fin-btn">Завершить занятие</button>
+        </div>
+
+        <!-- Мои игры (избранное — из личного кабинета) -->
+        <div class="screen" id="s-mygames">
+          <button class="back" data-goto="s-profile">← Личный кабинет</button>
+          <div class="h1">Мои игры</div>
+          <p class="sub" style="margin:6px 0 16px">Здесь появляются игры, которые понравились вашему ребёнку ❤️</p>
+          <div id="myempty" class="card" style="text-align:center;padding:36px 20px">
+            <div style="font-size:56px">❤️</div>
+            <p class="sub" style="margin-top:10px">Пока пусто. Поиграйте и нажмите «Понравилось» — игра сохранится здесь. Или добавьте её кнопкой 🤍 в карточке игры.</p>
+          </div>
+          <div id="mylist"></div>
+        </div>
+
+        <!-- Дневник -->
+        <div class="screen" id="s-diary">
+          <button class="back" data-goto="s-profile">← Личный кабинет</button>
+          <div class="h1">Дневник</div>
+          <p class="sub" style="margin:6px 0 14px">Прогресс за неделю</p>
+          <div class="stats">
+            <div class="stat"><b id="stat-sessions">5</b><span>занятий</span></div>
+            <div class="stat"><b id="stat-mins">48</b><span>минут</span></div>
+            <div class="stat"><b id="stat-liked">80%</b><span>понравилось</span></div>
+          </div>
+          <div class="card">
+            <b style="font-size:14px">Активность, мин/день</b>
+            <div class="bars" id="diary-bars"></div>
+          </div>
+          <div class="sect">История</div>
+          <div id="diary-history"></div>
+          <button class="btn btn-ghost" style="margin-top:12px" data-goto="s-report">📊 Отчёт для специалиста</button>
+        </div>
+
+        <!-- Отчёт для специалиста -->
+        <div class="screen" id="s-report">
+          <button class="back" data-goto="s-profile">← Личный кабинет</button>
+          <div class="h1">Отчёт для специалиста</div>
+          <p class="sub" style="margin:6px 0 14px">Какие типы игр заходят <span class="rep-child">Мие</span>, а какие — нет</p>
+          <div class="stats">
+            <div class="stat"><b id="rep-sessions">8</b><span>занятий</span></div>
+            <div class="stat"><b id="rep-mins">96</b><span>минут всего</span></div>
+            <div class="stat"><b id="rep-rate">75%</b><span>понравилось</span></div>
+          </div>
+          <div class="card">
+            <b style="font-size:14px">💚 Что заходит ребёнку</b>
+            <div id="rep-yes" style="margin-top:10px"></div>
+          </div>
+          <div class="card" style="margin-top:10px">
+            <b style="font-size:14px">🧡 Не заходит / было трудно</b>
+            <div id="rep-no" style="margin-top:10px"></div>
+          </div>
+          <div class="card" style="margin-top:10px">
+            <b style="font-size:14px">🧺 Любимые материалы</b>
+            <p class="sub" style="font-size:13px;margin-top:6px" id="rep-mats"></p>
+          </div>
+          <div class="card" style="margin-top:10px">
+            <b style="font-size:14px">📝 Наблюдения для специалиста</b>
+            <div id="rep-notes" style="margin-top:8px"></div>
+          </div>
+          <div class="note blue" style="margin-top:12px">Возраст: <span class="rep-age">3 года</span> · Особенности: <span class="rep-dx">РАС</span> · Рекомендация: давать сенсорные игры с крупой и водой, соревновательные элементы — дозированно.</div>
+          <button class="btn btn-primary" style="margin-top:12px" onclick="toast('PDF-отчёт сформирован (демо) 📄 — доступен для скачивания в приложении')">📤 Экспорт отчёта (PDF)</button>
+          <p class="sub" style="text-align:center;font-size:11.5px;margin-top:10px">Отчёт строится по дневнику, лайкам и обратной связи после занятий</p>
+        </div>
+
+        <!-- Личный кабинет: ребёнок под фоткой -->
+        <div class="screen" id="s-profile">
+          <div class="h1">Личный кабинет</div>
+          <button class="child-card" data-goto="s-child">
+            <div class="avatar-xl av-lav" id="profile-avatar">👧</div>
+            <b style="font-size:20px" id="name-label">Мия</b>
+            <span class="hint-sm">Нажмите на ребёнка — под фоткой спрятаны возраст, особенности,
+              навыки и информация. Там же их можно менять ✏️</span>
+          </button>
+          <div class="sect">Мои игры</div>
+          <div id="mymini"></div>
+          <button class="prow" data-goto="s-mygames"><span class="em">❤️</span><span><b>Мои игры</b><span>Игры, которые понравились</span></span><span class="arr" id="my-count">›</span></button>
+          <div class="sect">Ещё</div>
+          <button class="prow" data-goto="s-diary"><span class="em">📔</span><span><b>Дневник</b><span>Прогресс и активность</span></span><span class="arr">›</span></button>
+          <button class="prow" data-goto="s-report"><span class="em">📊</span><span><b>Отчёт для специалиста</b><span>Какие типы игр заходят, а какие нет</span></span><span class="arr">›</span></button>
+          <button class="prow" data-goto="s-audio"><span class="em">🎵</span><span><b>Аудио</b><span>Музыка, звуки природы</span></span><span class="arr">›</span></button>
+          <button class="prow" data-goto="s-sub"><span class="em">💎</span><span><b>Подписка</b><span style="color:var(--coral);font-weight:700">PRO · полный доступ</span></span><span class="arr">›</span></button>
+          <button class="prow" onclick="toast('В демо — один ребёнок 👶')"><span class="em">👶</span><span><b>Добавить ребёнка</b><span>Можно несколько профилей</span></span><span class="arr">›</span></button>
+        </div>
+
+        <!-- Характеристики ребёнка (спрятаны под фоткой в кабинете) -->
+        <div class="screen" id="s-child">
+          <button class="back" data-goto="s-profile">← Личный кабинет</button>
+          <div class="h1">Характеристики ребёнка</div>
+          <div class="card" style="display:flex;gap:14px;align-items:center;margin-top:12px">
+            <div class="avatar-big av-lav" id="child-avatar">👧</div>
+            <div>
+              <b style="font-size:18px" id="child-name">Мия</b>
+              <p class="sub" id="child-sub">3 года · РАС</p>
+            </div>
+          </div>
+          <div class="preset">
+            <button class="btn btn-lav btn-sm" onclick="applyPreset('mia')">👧 Мия (РАС, 3 года)</button>
+            <button class="btn btn-mint btn-sm" onclick="applyPreset('tim')">🧒 Тимофей (СДВГ, 6 лет)</button>
+          </div>
+          <p class="sub" style="font-size:12px;margin:0 2px 6px">Переключите пресет — подбор мгновенно перестроится. Или редактируйте характеристики ниже.</p>
+
+          <div class="sect">Возраст</div>
+          <div class="card skill">
+            <div class="sk-top"><b>Возраст ребёнка</b><span class="sl-val" id="age-val"></span></div>
+            <input type="range" id="age-slider" min="1" max="12" step="1" value="3">
+            <p class="sl-label">ИИ показывает только игры, подходящие по возрастному диапазону.</p>
+          </div>
+
+          <div class="sect">Время на занятие</div>
+          <div class="chips single" id="time-chips">
+            <button class="chip" data-v="5">5 мин</button>
+            <button class="chip sel" data-v="10">10 мин</button>
+            <button class="chip" data-v="15">15 мин</button>
+            <button class="chip" data-v="30">30 мин</button>
+          </div>
+
+          <div class="sect">Навыки — двигайте ползунок</div>
+          <div id="skill-sliders"></div>
+
+          <div class="sect">Особенности развития</div>
+          <div id="dx-chips"></div>
+
+          <div class="sect">Что может помешать</div>
+          <div class="chips pchips" id="trig-chips" data-set="trig"></div>
+
+          <div class="sect">Интересы</div>
+          <div class="chips pchips" id="int-chips" data-set="int"></div>
+
+          <div class="sect">Материалы дома</div>
+          <div class="chips pchips" id="mat-chips" data-set="mats"></div>
+        </div>
+
+        <!-- Аватарка (Творчество): список особенностей → генерация → скачивание -->
+        <div class="screen" id="s-avatar2">
+          <button class="back" data-goto="s-tales">← Творчество</button>
+          <div class="h1">Аватарка для <span id="avatar-name">Мии</span></div>
+          <p class="sub" style="margin:8px 0 4px">Выберите особенности — ИИ нарисует ребёнка-супер-героя, где каждая особенность становится суперсилой ✨</p>
+          <div class="sect">Что превратить в суперсилы?</div>
+          <div class="chips multi" id="av-dx-chips"></div>
+          <button class="btn btn-primary" style="margin-top:16px" id="av-go">✨ Сгенерировать аватарку</button>
+          <div id="av-result" style="display:none;margin-top:6px">
+            <img class="genimg" id="av-img" alt="Аватарка ребёнка">
+            <div style="display:flex;gap:10px;margin-top:10px">
+              <a class="btn btn-mint dlbtn" id="av-download" download="avatar.png" style="flex:1">⬇ Скачать</a>
+              <button class="btn btn-lav btn-sm" id="av-apply" style="flex:1">Сделать аватаром</button>
+            </div>
+            <button class="btn btn-ghost btn-sm" id="av-again" style="margin-top:10px;width:100%">🔄 Сгенерировать заново</button>
+          </div>
+          <p class="sub" style="text-align:center;font-size:12px;margin-top:14px">Реальное фото не используется · картинка доступна для скачивания</p>
+        </div>
+
+        <!-- Аудио -->
+        <div class="screen" id="s-audio">
+          <button class="back" data-goto="s-profile">← Профиль</button>
+          <div class="h1">Аудио</div>
+          <div class="sect">Сейчас играет</div>
+          <div class="card player" id="player">
+            <span style="font-size:30px">🌧</span>
+            <div style="flex:1"><b style="font-size:15px">Шум дождя</b><p class="sub" style="font-size:12px">Звуки природы · тихо · 10 мин</p><div class="pbar" style="margin-top:8px"><i></i></div></div>
+            <button class="playbtn" onclick="togglePlay(this)">▶</button>
+          </div>
+          <div class="note mint" style="margin-top:12px">🔇 Чувствительность к звукам учтена: только тихие треки и звуки природы. Музыку можно отключить в любой момент.</div>
+          <div class="sect">Категории</div>
+          <button class="prow" onclick="toast('Категория откроется в приложении 🎼')"><span class="em">🎼</span><span><b>Фоновая музыка</b><span>Классика, колыбельные, мягкий джаз</span></span><span class="arr">›</span></button>
+          <button class="prow" onclick="toast('Выберите: дождь, море, птицы, лес…')"><span class="em">🌧</span><span><b>Звуки природы</b><span>Дождь, море, птицы, листья, костёр</span></span><span class="arr">›</span></button>
+          <button class="prow" onclick="toast('Звонок, хлопок, барабан и др. 🔔')"><span class="em">🔔</span><span><b>Звуковые эффекты</b><span>Для игр на счёт и реакцию</span></span><span class="arr">›</span></button>
+          <button class="prow" onclick="toast('«Молодец!», «Ты справился!» 🗣')"><span class="em">🗣</span><span><b>Голосовые подсказки</b><span>Подбадривание во время игры</span></span><span class="arr">›</span></button>
+          <button class="prow" data-goto="s-tales"><span class="em">🎨</span><span><b>Творчество</b><span>Сказка и аватарка — в нижнем меню</span></span><span class="arr">›</span></button>
+          <button class="prow" onclick="toast('Для движения и танцев 🥁')"><span class="em">🥁</span><span><b>Ритмичные мелодии</b><span>Хлопки, топанье, танцы</span></span><span class="arr">›</span></button>
+        </div>
+
+        <!-- Творчество (бывшие «Сказки») -->
+        <div class="screen" id="s-tales">
+          <div class="h1">Творчество</div>
+          <p class="sub" style="margin:6px 0 18px">Создаём вместе с ИИ — для <span id="tales-name">Мии</span></p>
+          <button class="opt" data-goto="s-tale-new">
+            <span class="em">📖</span>
+            <span><b>Сказка</b><span>Выберите длительность — ИИ сочинит и озвучит</span></span>
+          </button>
+          <button class="opt" data-goto="s-avatar2">
+            <span class="em">🖼</span>
+            <span><b>Сгенерировать аватарку</b><span>Список особенностей → картинка ребёнка (можно скачать)</span></span>
+          </button>
+          <div class="note mint" style="margin-top:14px">Сказка учитывает особенности и интересы ребёнка: спокойный темп, добрый сюжет, без резких поворотов ✨</div>
+        </div>
+
+        <!-- Сказка: длительность → роль → тема -->
+        <div class="screen" id="s-tale-new">
+          <button class="back" data-goto="s-tales">← Творчество</button>
+          <div class="h1">На сколько минут сказку?</div>
+          <p class="sub" style="margin:8px 0 16px">Шаг 1 · длительность</p>
+          <div class="chips single" id="tale-dur" style="gap:10px">
+            <button class="chip sel" data-v="5" style="padding:14px 22px;font-size:15px">5 мин</button>
+            <button class="chip" data-v="10" style="padding:14px 22px;font-size:15px">10 мин</button>
+            <button class="chip" data-v="15" style="padding:14px 22px;font-size:15px">15 мин</button>
+            <button class="chip" data-v="20" style="padding:14px 22px;font-size:15px">20 мин</button>
+          </div>
+          <div class="sect" style="margin-top:16px">Кем будет ребёнок?</div>
+          <div class="chips single" id="tale-role">
+            <button class="chip sel">🧭 Путешественник</button><button class="chip">🦁 Храбрец</button>
+            <button class="chip">🪄 Волшебник</button><button class="chip">🐾 Друг животных</button>
+            <button class="chip">🎨 Художник</button><button class="chip">🎻 Музыкант</button>
+            <button class="chip">💡 Изобретатель</button><button class="chip">🌱 Садовник</button>
+            <button class="chip">⭐ Звёздочка</button><button class="chip">📚 Сказочник</button>
+          </div>
+          <div class="sect">Про что сказка?</div>
+          <div class="chips single" id="tale-theme">
+            <button class="chip sel">☁️ Дружба</button><button class="chip">🌲 Природа</button>
+            <button class="chip">🚀 Космос</button><button class="chip">🦁 Смелость</button>
+            <button class="chip">🌅 Мечта</button><button class="chip">🌊 Море</button>
+            <button class="chip">✨ Волшебство</button><button class="chip">💛 Доброта</button>
+            <button class="chip">👨‍👩‍👧 Семья</button><button class="chip">🗺 Приключение</button>
+          </div>
+          <button class="btn btn-primary" style="margin-top:22px" id="t-go">🎧 Сочинить и озвучить</button>
+          <p class="sub" style="text-align:center;font-size:12px;margin-top:10px">Сказка создастся с учётом особенностей и интересов ребёнка ✨</p>
+        </div>
+
+        <!-- Сказка (результат) -->
+        <div class="screen" id="s-tale">
+          <button class="back" data-goto="s-tale-new">← Выбор</button>
+          <div class="cover cov-e">📖</div>
+          <div class="h1" style="margin-top:14px;font-size:23px" id="tale-title">Как Мия подружилась с облаком</div>
+          <div class="tagrow"><span class="tag" id="tale-meta">Путешественник · Дружба · 5 мин</span><span class="tag m" id="tale-ai">Создано ИИ</span></div>
+          <div class="card player" id="tale-player">
+            <span style="font-size:28px">🎧</span>
+            <div style="flex:1"><b style="font-size:14px" id="tale-audio-label">Слушать сказку</b><div class="pbar" style="margin-top:8px"><i></i></div></div>
+            <button class="playbtn" id="tale-play-btn">▶</button>
+          </div>
+          <div class="card" style="margin-top:12px">
+            <p id="tale-text" style="font-size:14px;line-height:1.6">Жила-была девочка Мия…</p>
+          </div>
+          <div class="note mint" style="margin-top:12px" id="tale-moral"><b>Мораль:</b> помощь другим приносит радость.</div>
+          <div class="note blue" style="margin-top:10px" id="tale-pause"><b>Пауза для игры:</b> «А теперь давай нарисуем облачко!» 🎨</div>
+          <p class="sub" style="text-align:center;font-size:12px;margin-top:12px" id="tale-for">Сказка создана специально для Мии ✨</p>
+        </div>
+
+        <!-- Чат -->
+        <div class="screen" id="s-chat">
+          <div class="h1" style="margin-bottom:4px">Чат с ИИ 💬</div>
+          <p class="sub" style="margin:0 0 12px">Напишите, какие вещи есть у вас дома — и я придумаю игру из них!</p>
+          <div class="chat-box" id="chat-box">
+            <div class="msg bot">Здравствуйте! Расскажите, какие вещи есть у вас под рукой — например: «у нас есть крупа, ложки и чашки» — и я придумаю игру из них 🎲 Или спросите, чем заняться прямо сейчас.</div>
+          </div>
+          <div class="chips" style="margin-bottom:6px">
+            <button class="chip" onclick="sendChat('У нас есть крупа, ложки и чашки')">🧺 Крупа, ложки, чашки</button>
+            <button class="chip" onclick="sendChat('Дома есть подушки, кубики и мяч')">🛏 Подушки, кубики, мяч</button>
+            <button class="chip" onclick="sendChat('Чем заняться прямо сейчас?')">⚡ Чем заняться?</button>
+          </div>
+          <div class="chat-in">
+            <input id="chat-in" placeholder="Напишите сообщение…">
+            <button id="chat-send">➤</button>
+          </div>
+        </div>
+
+        <!-- Подписка -->
+        <div class="screen" id="s-sub">
+          <button class="back" data-goto="s-profile">← Профиль</button>
+          <div style="text-align:center;font-size:52px;margin:8px 0">💎</div>
+          <div class="h1" style="text-align:center">Откройте все возможности</div>
+          <div class="card" style="margin-top:18px">
+            <div class="benef"><span class="ck">✓</span>Персональный подбор из всей базы</div>
+            <div class="benef"><span class="ck">✓</span>Адаптация под состояние ребёнка</div>
+            <div class="benef"><span class="ck">✓</span>Переработка под возраст</div>
+            <div class="benef"><span class="ck">✓</span>«Мои игры» — любимые занятия</div>
+            <div class="benef"><span class="ck">✓</span>Карточки к играм, где они нужны</div>
+            <div class="benef"><span class="ck">✓</span>Аватарка из фото</div>
+            <div class="benef"><span class="ck">✓</span>Аудио и сказки</div>
+            <div class="benef"><span class="ck">✓</span>Отчёты для специалиста</div>
+          </div>
+          <div class="card price" style="margin-top:14px"><b>400 ₽</b> <span>/ месяц</span><p class="sub" style="margin-top:6px">Первые 7 дней — бесплатно</p></div>
+          <button class="btn btn-primary" style="margin-top:14px" onclick="toast('Пробный период 7 дней активирован 🎉 (демо)')">Попробовать 7 дней бесплатно</button>
+          <p class="sub" style="text-align:center;font-size:12px;margin-top:12px">Автопродление · отмена в любой момент<br>Бесплатно: 20 игр + базовый дневник + ограниченный ИИ</p>
+        </div>
+
+      </div><!-- /screens -->
+
+      <!-- Модалка: музыка -->
+      <div class="modal" id="m-music">
+        <div class="sheet">
+          <div class="grab"></div>
+          <h3>🎵 ИИ подобрал музыку</h3>
+          <p class="sub" id="mm-note">Под категорию игры с учётом чувствительности к звукам.</p>
+          <div class="card player">
+            <span style="font-size:28px" id="mm-emoji">🌧</span>
+            <div style="flex:1"><b style="font-size:14px" id="mm-track">Шум дождя</b><p class="sub" style="font-size:12px" id="mm-meta">тихо · 10 мин</p></div>
+            <button class="playbtn" onclick="togglePlay(this)">▶</button>
+          </div>
+          <button class="btn btn-mint" style="margin-top:14px" onclick="closeM('m-music');toast('Играет: музыка по категории игры 🔉')">Слушать во время игры</button>
+          <button class="btn btn-ghost" style="margin-top:10px" onclick="closeM('m-music');toast('Музыка отключена 🔇')">Отключить музыку</button>
+        </div>
+      </div>
+
+      <!-- Модалка: адаптация -->
+      <div class="modal" id="m-adapt">
+        <div class="sheet">
+          <div class="grab"></div>
+          <h3>🔄 Переработка под возраст</h3>
+          <p class="sub" id="adapt-sub"></p>
+          <div class="card" id="adapt-rows"></div>
+          <div class="note" style="margin:12px 0">⚠️ ИИ также учитывает триггеры, аллергии и утомляемость из профиля.</div>
+          <button class="btn btn-lav" onclick="applyAdapt()">Применить адаптацию</button>
+          <button class="btn btn-ghost" style="margin-top:10px" onclick="closeM('m-adapt')">Оставить как есть</button>
+        </div>
+      </div>
+
+      <div class="toast" id="toast"></div>
+
+      <nav class="bottom-nav">
+        <button class="tab on" id="tab-home" data-goto="s-home"><span class="ic">🏠</span>Главная</button>
+        <button class="tab" id="tab-games" data-goto="s-games"><span class="ic">🧩</span>Игры</button>
+        <button class="tab" id="tab-create" data-goto="s-tales"><span class="ic">🎨</span>Творчество</button>
+        <button class="tab" id="tab-chat" data-goto="s-chat"><span class="ic">💬</span>Чат</button>
+        <button class="tab" id="tab-profile" data-goto="s-profile"><span class="ic">👤</span>Кабинет</button>
+      </nav>
+
+    </div>
+    <p class="hint">👆 Кликайте по элементам телефона — демо интерактивно. Измените профиль → подбор пересчитается.</p>
+  </section>
+</main>
+
+<script src="games-db.js"></script>
+<script src="games-extra.js"></script>
+<script src="games-patch.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
